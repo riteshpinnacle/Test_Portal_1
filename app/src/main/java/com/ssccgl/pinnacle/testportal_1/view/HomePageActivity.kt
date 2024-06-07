@@ -1,4 +1,4 @@
-package com.ssccgl.pinnacle.testportal_1
+package com.ssccgl.pinnacle.testportal_1.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
+import com.ssccgl.pinnacle.testportal_1.R
 
 class HomePageActivity : AppCompatActivity() {
     lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
@@ -23,7 +24,10 @@ class HomePageActivity : AppCompatActivity() {
         val appBar = findViewById<Toolbar>(R.id.appBar)
         val mainDrawer = findViewById<DrawerLayout>(R.id.mainDrawer)
         setSupportActionBar(appBar)
-        actionBarDrawerToggle = ActionBarDrawerToggle(this,mainDrawer, R.string.app_name, R.string.app_name)
+        actionBarDrawerToggle = ActionBarDrawerToggle(this,mainDrawer,
+            R.string.app_name,
+            R.string.app_name
+        )
         actionBarDrawerToggle.syncState()
     }
 
