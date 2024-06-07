@@ -11,7 +11,8 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        tools:src="@drawable/img" />
+        android:src="@drawable/img_1"
+        tools:src="@drawable/img_1" />
 
     <TextView
         style="@style/TextAppearance.AppCompat.Subhead"
@@ -20,4 +21,5 @@
         android:layout_marginTop="16dp"
         android:textColor="@android:color/white"
         android:text="Quiz Yourself Daily" />
+
 </LinearLayout>
