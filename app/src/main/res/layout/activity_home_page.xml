@@ -34,7 +34,31 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabIndicatorHeight="16dp"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextColor="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/viewPager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/iconRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:clipToPadding="false"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -49,48 +73,3 @@
 
 </androidx.drawerlayout.widget.DrawerLayout>
 
-
-
-    <!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:id="@+id/mainDrawer"-->
-<!--    tools:context=".view.HomePageActivity">-->
-
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-<!--        -->
-<!--        <com.google.android.material.appbar.AppBarLayout-->
-<!--            android:id="@+id/appBarLayout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:layout_constraintTop_toTopOf="parent">-->
-
-<!--            <com.google.android.material.appbar.MaterialToolbar-->
-<!--                android:id="@+id/appBar"-->
-<!--                style="@style/Widget.MaterialComponents.Toolbar.Primary"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="?attr/actionBarSize"-->
-<!--                app:navigationIcon="@drawable/ic_hamburger"-->
-<!--                app:title="@string/app_name">-->
-
-<!--            </com.google.android.material.appbar.MaterialToolbar>-->
-
-<!--        </com.google.android.material.appbar.AppBarLayout>-->
-<!--        -->
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:layout_gravity="start"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:headerLayout="@layout/drawer_header"-->
-<!--        app:menu="@menu/drawer_menu">-->
-
-<!--    </com.google.android.material.navigation.NavigationView>-->
-
-<!--</androidx.drawerlayout.widget.DrawerLayout>-->
